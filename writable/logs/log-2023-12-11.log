@@ -1,0 +1,54 @@
+INFO - 2023-12-11 14:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-11 14:36:59 --> Call to undefined function validation_list_errors()
+in APPPATH\Views\user\register.php on line 38.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('user/register', [], true)
+ 4 APPPATH\Controllers\User.php(14): view('user/register')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\User->register()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\bekawan\\public\\index.php')
+INFO - 2023-12-11 14:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-12-11 14:37:12 --> Call to undefined function validation_list_errors()
+in APPPATH\Views\user\register.php on line 38.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('user/register', [], true)
+ 4 APPPATH\Controllers\User.php(14): view('user/register')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\User->register()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\bekawan\\public\\index.php')
+CRITICAL - 2023-12-11 14:39:52 --> Undefined index: email
+in APPPATH\Controllers\User.php on line 33.
+ 1 APPPATH\Controllers\User.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: email', 'C:\\laragon\\www\\bekawan\\app\\Controllers\\User.php', 33, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\User->regis()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\bekawan\\public\\index.php')
+CRITICAL - 2023-12-11 14:40:27 --> "email" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 319.
+ 1 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('email')
+ 2 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('email', 'email', 'musliminlimin35@gmail.com', [...], [...])
+ 3 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\User.php(23): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\User->regis()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\bekawan\\public\\index.php')
+CRITICAL - 2023-12-11 14:40:53 --> "email" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 319.
+ 1 SYSTEMPATH\Validation\Validation.php(319): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('email')
+ 2 SYSTEMPATH\Validation\Validation.php(197): CodeIgniter\Validation\Validation->processRules('email', 'email', 'musliminlimin35@gmail.com', [...], [...])
+ 3 SYSTEMPATH\Controller.php(152): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\User.php(23): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\User->regis()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\bekawan\\public\\index.php')
