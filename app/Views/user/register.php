@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #316064;
+            background-color: #1A76D1;
             color: #fff;
         }
 
@@ -34,8 +34,10 @@
                 <div class="login-container p-4 rounded">
                     <div class="card">
                         <div class="card-body justify-content-center center-content">
-                            <img src="<?= base_url('/img/logo.png') ?>" alt="" height="150px" width="150px">
-                            <h2 class="text-center mb-4">Register</h2>
+                            <br>
+                            <h2><a href="<?= base_url() ?>" class="text-primary" style="text-decoration: none;">Klandestin.my.id</a></h2>
+                            <br>
+                            <h4 class="text-center mb-4">Register</h4>
                             <?php if (isset($validation)) : ?>
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     <?= $validation->listErrors() ?>
@@ -83,9 +85,9 @@
                                     <label for="confpassword" class="form-label">Password</label>
                                     <input type="password" class="form-control" id="confpassword" name="confpassword" placeholder="Reapet your password">
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100" style="background-color: #316064;">Register</button>
+                                <button type="submit" class="btn btn-primary w-100" style="background-color: #1A76D1;">Register</button>
                                 <hr>
-                                <p style="font-size: 12px;color: #316064;font-weight: 500;">If you already have an account <span><a href="<?= base_url('/login') ?>" style="text-decoration: none;">click here</a></span> to login</p>
+                                <p style="font-size: 12px;color: #1A76D1;font-weight: 500;">If you already have an account <span><a href="<?= base_url('/login') ?>" style="text-decoration: none;">click here</a></span> to login</p>
                             </form>
                         </div>
                     </div>

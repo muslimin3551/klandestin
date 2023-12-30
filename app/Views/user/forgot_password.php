@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #316064;
+            background-color: #1A76D1;
             color: #fff;
         }
 
@@ -34,8 +34,10 @@
                 <div class="login-container p-4 rounded">
                     <div class="card">
                         <div class="card-body justify-content-center center-content p-5">
-                            <img src="<?= base_url('/img/logo.png') ?>" alt="" height="150px" width="150px">
-                            <h2 class="text-center mb-4">Forgot Password</h2>
+                            <br>
+                            <h2><a href="<?= base_url() ?>" class="text-primary" style="text-decoration: none;">Klandestin.my.id</a></h2>
+                            <br>
+                            <h4 class="text-center mb-4">Forgot Password</h4>
                             <?php if (isset($validation)) : ?>
                                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                             <?php endif; ?>
@@ -50,7 +52,7 @@
                                     <label for="email" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="email" placeholder="Enter your email">
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100" style="background-color: #316064;">Reset Password</button>
+                                <button type="submit" class="btn btn-primary w-100" style="background-color: #1A76D1;">Reset Password</button>
                             </form>
                             <br>
                             <br>

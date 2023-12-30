@@ -1,0 +1,22 @@
+ERROR - 2023-12-27 02:21:44 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2023-12-27 02:21:44 --> 220 ESMTP smtp.hostinger.com
+
+hello: 250-smtp.hostinger.com
+250-PIPELINING
+250-SIZE 48811212
+250-ETRN
+250-AUTH PLAIN LOGIN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 CHUNKING
+
+from: 250 2.1.0 Ok
+
+to: 553 5.7.1 <musliminlimin35@gmail.com>: Sender address rejected: not owned by user system@Klandestin.my.id
+
+The following SMTP error was encountered: 553 5.7.1 <musliminlimin35@gmail.com>: Sender address rejected: not owned by user system@Klandestin.my.id
+
+quit: 221 2.0.0 Bye
+
+INFO - 2023-12-27 14:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

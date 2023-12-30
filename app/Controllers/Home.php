@@ -4,12 +4,17 @@ namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\ArticleModel;
+use App\Models\CounselorModel;
 
 class Home extends BaseController
 {
     public function index(): string
     {
         $data['title'] = 'HOME';
+        $article = new ArticleModel();
+        $counselor = new CounselorModel();
+        $data['articles'] = $article->where('is_deleted', 0)->where('is_published', 1)->findAll();
+        $data['counselors'] = $counselor->where('is_deleted', 0)->where('role', 2)->findAll();
         return view('index', $data);
     }
 
@@ -31,7 +36,7 @@ class Home extends BaseController
         $config = [
             'protocol' => 'smtp',
             'SMTPHost' => 'smtp.hostinger.com',
-            'SMTPUser' => 'system@bekawan.my.id',
+            'SMTPUser' => 'system@Klandestin.my.id',
             'SMTPPass' => 'Qazwsx123!',
             'SMTPPort' => 465,
             'SMTPCrypto' => 'ssl',
@@ -55,7 +60,7 @@ class Home extends BaseController
                 <br style="margin: 0;padding: 0;">
                 <div style="margin: 0;padding: 0;">
                     <header class="content" style="margin: 0 10px 0 10px;padding: 0;">
-                        <h1>Bekawan.my.id</h1>
+                        <h1>Klandestin.my.id</h1>
                     </header>
                 </div><br style="margin: 0;padding: 0;">
                 <div class="content" style="margin: 0 10px 0 10px;padding: 0;">
@@ -134,6 +139,7 @@ class Home extends BaseController
         // Update views count
         $model->where('id', $id)->set('views', $article['views'] + 1)->update();
         $data['article'] = $model->where('id', $id)->first();
+        $data['articles'] = $model->where('is_deleted', 0)->where('is_published', 1)->findAll();
         $data['title'] = 'Detail ARTICLE';
         return view('article_detail', $data);
     }

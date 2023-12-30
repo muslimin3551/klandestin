@@ -55,7 +55,7 @@ class Counselor extends BaseController
                 'email'         => 'required|min_length[6]|max_length[50]|valid_email|is_unique[tbl_konselors.email]',
                 'password'      => 'required|min_length[6]|max_length[200]',
                 'confpassword'  => 'matches[password]',
-                'image'         => 'uploaded[image]|max_size[image,2024]|is_image[image]'
+                'image'         => 'uploaded[image]|max_size[image,5024]|is_image[image]'
             ];
 
             if ($this->validate($rules)) {

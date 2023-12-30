@@ -25,7 +25,7 @@
             <header class="mb-5">
                 <div class="header-top">
                     <div class="container">
-                        <h4>Bekawan.my.id</h4>
+                        <h4>Klandestin.my.id</h4>
                         <div class="header-top-right">
 
                             <div class="dropdown">
@@ -57,12 +57,17 @@
                 $uri3 = $uri[3] ?? '';
                 session()
                 ?>
-                <nav class="main-navbar" style="background-color: #316064;">
+                <nav class="main-navbar" style="background-color: #1A76D1;">
                     <div class="container">
                         <ul>
                             <li class="menu-item  ">
                                 <a href="<?= base_url('dashboard') ?>" class='menu-link'>
                                     <span><i class="bi bi-grid-fill"></i> Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="menu-item  ">
+                                <a href="<?= base_url('anonymous') ?>" class='menu-link'>
+                                    <span><i class="bi bi-file-post-fill"></i>Anonymous post</span>
                                 </a>
                             </li>
                             <li class="menu-item  ">
@@ -95,10 +100,10 @@
                 <div class="container">
                     <div class="footer clearfix mb-0 text-muted">
                         <div class="float-start">
-                            <p>2023 &copy; Bekawan</p>
+                            <p>2023 &copy; Klandestin</p>
                         </div>
                         <div class="float-end">
-                            <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="https://saugi.me">Bekawan</a></p>
+                            <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a href="#">Klandestin</a></p>
                         </div>
                     </div>
                 </div>

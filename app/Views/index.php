@@ -1,392 +1,556 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
+    <!-- Meta Tags -->
     <meta charset="utf-8">
-    <title>Bekawan.my.id - <?= $title ?></title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Site keywords here">
+    <meta name="description" content="">
+    <meta name='copyright' content=''>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Klandestin.my.id -
+        <?= $title ?></title>
 
     <!-- Favicon -->
-    <link href="<?= base_url() ?>/img/favicon.ico" rel="icon">
+    <link rel="icon" href="<?= base_url('/new_landing/img/favicon.png') ?>">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/bootstrap.min.css') ?>">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/nice-select.css') ?>">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/font-awesome.min.css') ?>">
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/icofont.css') ?>">
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/slicknav.min.css') ?>">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/owl-carousel.css') ?>">
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/datepicker.css') ?>">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/animate.min.css') ?>">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/magnific-popup.css') ?>">
 
-    <!-- Libraries Stylesheet -->
-    <link href="<?= base_url() ?>/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="<?= base_url() ?>/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="<?= base_url() ?>/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Medipro CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/normalize.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('/new_landing/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/responsive.css') ?>">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="<?= base_url() ?>/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="<?= base_url() ?>/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+
+            <div class="indicator">
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
             </div>
         </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><span class="fs-4">Bekawan.my.id</span></h1>
-                    <!-- <img src="img/logo1.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="#" class="nav-item nav-link" onclick="setActive(this)">Home</a>
-                        <a href="#about" class="nav-item nav-link" onclick="setActive(this)">About</a>
-                        <a href="#service" class="nav-item nav-link" onclick="setActive(this)">Service</a>
-                        <a href="#Testimonial" class="nav-item nav-link" onclick="setActive(this)">Testimonial</a>
-                        <a href="#Counselor" class="nav-item nav-link" onclick="setActive(this)">Counselor</a>
-                        <a href="<?= base_url('/article') ?>" class="nav-item nav-link" onclick="setActive(this)">Article</a>
-                        <a href="<?= base_url('/contact') ?>" class="nav-item nav-link" onclick="setActive(this)">Contact</a>
-                    </div>
-                    <a href="<?= base_url('/login') ?>" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3" style="background-color: #316064;border: 0;">Login</a>
-                </div>
-            </nav>
-
-            <div class="container-xxl py-5 bg-primary hero-header mb-5">
-                <div class="container my-5 py-5 px-lg-5">
-                    <div class="row g-5 py-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated zoomIn">Selamat datang di bekawan.my.id </h1>
-                            <p class="text-white pb-3 animated zoomIn">Eksplor temanmu dimana pun dan kapanpun</p>
-                            <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Membership</a>
-                            <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid" src="<?= base_url("/img/output-onlinepngtools.png") ?>" alt="" style="background-color: transparent;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
-
-
-
-        <!-- About Start -->
-        <section id="about">
-            <div class="container-xxl py-5">
-                <div class="container px-lg-5">
-                    <div class="row g-5">
-                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="section-title position-relative mb-4 pb-2">
-                                <h6 class="position-relative text-success ps-4">About Us</h6>
-                                <h2 class="mt-2">Kesepian dapat meningkatkan risiko kematian dini hingga 50 persen.</h2>
-                            </div>
-                            <p class="mb-4">Tanpa kamu sadari, kesepian selalu menghampirimu, maka dari itu ayo eksplor temanmu di bekawan.my.id, carilah temanmu, curahkan isi hatimu.</p>
-                            <div class="d-flex align-items-center mt-4">
-                                <a class="btn btn-success rounded-pill px-4 me-3" href="">Read More</a>
-                                <a class="btn btn-outline-success btn-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-success btn-square me-3" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-success btn-square me-3" href="https://instagram.com/bekawan.yuk?igshid=MmVlMjlkMTBhMg"><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-success btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/about.jpg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About End -->
-
-
-        <!-- Service Start -->
-        <section id="service">
-            <div class="container-xxl py-5">
-                <div class="container px-lg-5">
-                    <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="position-relative d-inline text-primary ps-4">Our Services</h6>
-                        <h2 class="mt-2">What Solutions We Provide</h2>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
-                            <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                <div class="service-icon flex-shrink-0">
-                                    <i class="fa fa-home fa-2x"></i>
-                                </div>
-                                <h3 class="mb-3">Dekat</h3>
-                                <p> Kamu bisa bercerita dengan kami selama 7 hari, ceritamu kami pastikan akan terjaga dengan baik. </p>
-                                <h3>Rp 15.000</h3>
-                                <a class="btn px-3 mt-auto mx-auto" href="">Membership</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                            <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                <div class="service-icon flex-shrink-0">
-                                    <i class="fa fa-home fa-2x"></i>
-                                </div>
-                                <h3 class="mb-3"> Lebih Dekat</h3>
-                                <p>Kamu bisa bercerita dengan kami selama 14 hari, ceritamu kami pastikan akan terjaga dengan baik.</p>
-                                <h3>Rp 20.000</h3>
-                                <a class="btn px-3 mt-auto mx-auto" href="">Membership</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
-                            <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                                <div class="service-icon flex-shrink-0">
-                                    <i class="fa fa-home fa-2x"></i>
-                                </div>
-                                <h3 class="mb-3">Sangat Dekat</h3>
-                                <p> Kamu bisa bercerita dengan kami selama 30 hari, ceritamu kami pastikan akan terjaga dengan baik. </p>
-                                <h3>Rp 30.000</h3>
-                                <a class="btn px-3 mt-auto mx-auto" href="">Membership</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Service End -->
-
-
-        <!-- Testimonial Start -->
-        <section id="Testimonial">
-            <div class="container-xxl bg-primary testimonial py-5 my-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="position-relative ps-4 text-info">Testimony</h6>
-                </div>
-                <div class="container py-5 px-lg-5">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                            <i class="fa fa-quote-left fa-2x mb-3"></i>
-                            <p>Tidak perlu terburu-buru. Tidak perlu bersinar. Tidak perlu menjadi siapa pun kecuali diri sendiri.</p>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
-                                <div class="ps-3">
-                                    <h6 class="text-white mb-1">Virginia Woolf</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                            <i class="fa fa-quote-left fa-2x mb-3"></i>
-                            <p>Tidak ada seorangpun yang bisa kembali ke masa lalu dan memulai awal yang baru lagi. Tapi semua orang bisa memulai hari ini dan membuat akhir yang baru.</p>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;">
-                                <div class="ps-3">
-                                    <h6 class="text-white mb-1">Maria Robinson</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                            <i class="fa fa-quote-left fa-2x mb-3"></i>
-                            <p>Mengahabiskan waktu hari ini untuk mengeluh terhadap hari kemarin akan membuat hari esok lebih baik.</p>
-                            <div class="d-flex align-items-center">
-                                <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 50px; height: 50px;">
-                                <div class="ps-3">
-                                    <h6 class="text-white mb-1">Ds</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Testimonial End -->
-
-
-        <!-- Team Start -->
-        <section id="Counselor">
-            <div class="container-xxl py-5">
-                <div class="container px-lg-5">
-                    <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="position-relative d-inline text-success ps-4">Our Counselor</h6>
-                        <h2 class="mt-2">Meet Our Team Counselor</h2>
-                    </div>
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="team-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                    <img class="img-fluid rounded w-100" src="<?= base_url("/img/Desti Lawulan Sa'bani.png") ?>" alt="">
-                                </div>
-                                <div class="px-4 py-3">
-                                    <h5 class="fw-bold m-0">Desti Lawulan Sa'bani</h5>
-                                    <small>Counselor</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="team-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                    <img class="img-fluid rounded w-100" src="<?= base_url("/img/Muhammad Suta Wijaya.png") ?>" alt="">
-                                </div>
-                                <div class="px-4 py-3">
-                                    <h5 class="fw-bold m-0">Muhammad Suta Wijaya</h5>
-                                    <small>Counselor</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="team-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                    <img class="img-fluid rounded w-100" src="<?= base_url('/img/Nabila Azzahra Putri.png') ?>" alt="">
-                                </div>
-                                <div class="px-4 py-3">
-                                    <h5 class="fw-bold m-0">Nabila Azzahra Putri</h5>
-                                    <small>Counselor</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="team-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                    <img class="img-fluid rounded w-100" src="<?= base_url("/img/Sayidati Shabrina Seno.png") ?>" alt="">
-                                </div>
-                                <div class="px-4 py-3">
-                                    <h5 class="fw-bold m-0">Sayidati Shabrina Seno</h5>
-                                    <small>Counselor</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="team-item">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                        <a class="btn btn-square text-success bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                    <img class="img-fluid rounded w-100" src="<?= base_url("/img/Syaima Fikya Nabilah.png") ?>" alt="">
-                                </div>
-                                <div class="px-4 py-3">
-                                    <h5 class="fw-bold m-0">Syaima Fikya Nabilah</h5>
-                                    <small>Counselor</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Team End -->
-
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Get In Touch</h5>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Alamat kampus: Jl. Ciwaru Raya, Cipare, Kec. Serang, Kota Serang, Banten 42117</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+622543204321</p>
-                        <p><i class="fa fa-envelope me-3"></i>humas@untirta.ac.id</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Popular Link</h5>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Services</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Newsletter</h5>
-                        <p>Receive the latest information by entering your email below.</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-success fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Bekawan.my.id</a>, All Right Reserved.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-success btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
     </div>
+    <!-- End Preloader -->
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url() ?>/lib/wow/wow.min.js"></script>
-    <script src="<?= base_url() ?>/lib/easing/easing.min.js"></script>
-    <script src="<?= base_url() ?>/lib/waypoints/waypoints.min.js"></script>
-    <script src="<?= base_url() ?>/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="<?= base_url() ?>/lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="<?= base_url() ?>/lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Header Area -->
+    <header class="header">
+        <!-- Header Inner -->
+        <div class="header-inner">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <!-- Start Logo -->
+                            <div class="logo">
+                                <a href="#">
+                                    <h4><span class="text-primary">Klandestin.my.id</span></h4>
+                                </a>
+                            </div>
+                            <!-- End Logo -->
+                            <!-- Mobile Nav -->
+                            <div class="mobile-nav"></div>
+                            <!-- End Mobile Nav -->
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <!-- Main Menu -->
+                            <div class="main-menu">
+                                <nav class="navigation">
+                                    <ul class="nav menu">
+                                        <li>
+                                            <a href="#" onclick="setActive(this.parentNode)">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#about" onclick="setActive(this.parentNode)">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#counselor" onclick="setActive(this.parentNode)">Counselor</a>
+                                        </li>
+                                        <li>
+                                            <a href="#services" onclick="setActive(this.parentNode)">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="#blog" onclick="setActive(this.parentNode)">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= base_url('/contact') ?>" onclick="setActive(this.parentNode)">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--/ End Main Menu -->
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <div class="get-quote">
+                                <a href="<?= base_url('/login') ?>" class="btn">Get Membership</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Header Inner -->
+    </header>
+    <!-- End Header Area -->
 
-    <!-- Template Javascript -->
-    <script src="<?= base_url() ?>/js/main.js"></script>
+    <!-- Slider Area -->
+    <section class="slider">
+        <div class="container">
+            <div class="row pt-5 pb-5">
+                <div class="col-md-8 pt-5 pb-5">
+                    <div class="text">
+                        <h1>Selamat Datang di
+                            <span>Website</span>
+                            kami
+                            <span>Klandestin.my.id!</span>
+                        </h1>
+                        <br>
+                        <br>
+                        <p>
+                            Selamat datang di platform kami yang bertujuan untuk membantu para korban dalam bentuk bullying. Laporkan segala tindakan yang merugikan melalui fitur pengaduan kami. Bersama kita bisa menciptakan komunitas yang ramah dan mendukung.
+                        </p>
+                        <br>
+                        <br>
+                        <div class="button">
+                            <a href="#about" class="btn primary text-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="<?= base_url('/img/klandestin/slide1.jpg') ?>" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Slider Area -->
+
+    <!-- Start Why choose -->
+    <section class="why-choose section mt-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>About Us</h2>
+                        <img src="<?= base_url('new_landing/img/section-img.png') ?>" alt="#">
+                        <p>Kami Adalah protal untuk anda yang terkena bullying agar dapat pulih dari rasa trauma yang anda alami</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <!-- Start Choose Left -->
+                    <div class="choose-left">
+                        <h3>BE KIND BULLYING IS FOR LOSERS</h3>
+                        <p> Hai SobatKala menjadi seseorang yang pernah mengalami pembullyan sudah pasti sangat berat. kami ingin berbagi inspirasi untuk pesan menarik di situs Kami! Banyak dari kita yang mungkin terkadang kesulitan membuka suara tentang kejadian yang sudah kita alami, disini kami bersedia menjadi tempat bercerita.
+                        </p>
+                        <p>Kalian bisa memanfaatkan fitur Menfes Secret Box untuk berbagi kisah kalian, yang mana fitur ini juga bisa mengubungkan kalian dengan SobatKala yang lain. Lalu ada juga fitur Layanan Individual untuk penanganan lebih lanjut.</p>
+                        <p>“Bullying adalah tindakan kelemahan,bukan kekuatan. Jika kamu kuat gunakan kekuatanmu untuk melindungi dan mengangkat orang lain.”</p>
+                    </div>
+                    <!-- End Choose Left -->
+                </div>
+                <div class="col-lg-6 col-12">
+                    <!-- Start Choose Rights -->
+                    <div class="choose-right">
+                        <img src="<?= base_url('/img/klandestin/about_us.jpg') ?>" alt="">
+                    </div>
+                    <!-- End Choose Rights -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Why choose -->
+
+    <!-- Start portfolio -->
+    <section class="portfolio section" id="counselor">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Meet Our Counselor</h2>
+                        <img src="<?= base_url('new_landing/img/section-img.png') ?>" alt="#">
+                        <p>Tenaga ahli yang akan membantu anda dan siap mendengarkan anda!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="owl-carousel portfolio-slider">
+                        <?php foreach ($counselors as $item) { ?>
+                            <div class="card border-0" style="width: 20rem;">
+                                <img src="<?= base_url('uploads/') . $item['photos'] ?>" class="card-img-top" alt="..." style="max-height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= $item['name'] ?></h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><span class="badge bg-primary text-light">Counselor</span></li>
+                                </ul>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End portfolio -->
+
+    <!-- Pricing Table -->
+    <section class="pricing-table section" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Our Services</h2>
+                        <img src="<?= base_url('new_landing/img/section-img.png') ?>" alt="#">
+                        <p>Berikut beberapa paket membership yang tersedia di platform kami!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Single Table -->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="single-table">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="icon">
+                                <i class="icofont icofont-ui-cut"></i>
+                            </div>
+                            <h4 class="title">Paket kenalan</h4>
+                            <div class="price">
+                                <p class="amount">Rp 7000<span>/ Per 7 Hari</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>konseling selama 3 hari
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Kami menjunjung tinggi asas kerahasiaan.
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Ceritakan permasalahan yang sedang kamu hadapi.
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>kita cari solusi bersama Konselor.
+                            </li>
+                        </ul>
+                        <div class="table-bottom">
+                            <a class="btn" href="#">Book Now</a>
+                        </div>
+                        <!-- Table Bottom -->
+                    </div>
+                </div>
+                <!-- End Single Table-->
+                <!-- Single Table -->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="single-table">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="icon">
+                                <i class="icofont icofont-ui-cut"></i>
+                            </div>
+                            <h4 class="title">Paket kenalan</h4>
+                            <div class="price">
+                                <p class="amount">Rp 12000<span>/ Per 3 Hari</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>konseling selama 7 hari
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Kami menjunjung tinggi asas kerahasiaan.
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Ceritakan permasalahan yang sedang kamu hadapi.
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>kita cari solusi bersama Konselor.
+                            </li>
+                        </ul>
+                        <div class="table-bottom">
+                            <a class="btn" href="#">Book Now</a>
+                        </div>
+                        <!-- Table Bottom -->
+                    </div>
+                </div>
+                <!-- End Single Table-->
+                <!-- Single Table -->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="single-table">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="icon">
+                                <i class="icofont icofont-ui-cut"></i>
+                            </div>
+                            <h4 class="title">Paket kenalan</h4>
+                            <div class="price">
+                                <p class="amount">Rp 15000<span>/ Per 10 Hari</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>konseling selama 10 hari
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Kami menjunjung tinggi asas kerahasiaan.
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>Ceritakan permasalahan yang sedang kamu hadapi.
+                            </li>
+                            <li>
+                                <i class="icofont icofont-ui-check"></i>kita cari solusi bersama Konselor.
+                            </li>
+                        </ul>
+                        <div class="table-bottom">
+                            <a class="btn" href="#">Book Now</a>
+                        </div>
+                        <!-- Table Bottom -->
+                    </div>
+                </div>
+                <!-- End Single Table-->
+            </div>
+        </div>
+    </section>
+    <!--/ End Pricing Table -->
+
+    <!-- Start Blog Area -->
+    <section class="blog section" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Keep up with Our Most Recent Bullying News.</h2>
+                        <img src="<?= base_url('new_landing/img/section-img.png') ?>" alt="#">
+                        <p>Update artikel tetang bullying dan solusi untuk mengatasinya</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <?php foreach ($articles as $article) { ?>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <!-- Single Blog -->
+                        <div class="single-news" style="min-height: 600px;">
+                            <div class="news-head" style="max-height: 250px;min-height: 200px;">
+                                <img src="<?= base_url('uploads/article/') . $article['photo'] ?>" alt="#">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-content">
+                                    <?php
+                                    $createdAt = $article['created_at'];
+                                    $formattedDate = date('Y. F j', strtotime($createdAt));
+                                    ?>
+                                    <div class="date"><?= $formattedDate ?></div>
+                                    <h2>
+                                        <a href="<?= base_url('/article/') . $article['id'] ?>"><?= $article['title'] ?></a>
+                                    </h2>
+                                    <p class="text"><?= $article['sort_description'] ?></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Blog -->
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
+    <!-- End Blog Area -->
+
+    <!-- Footer Area -->
+    <footer id="footer" class="footer ">
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>About Us</h2>
+                            <p>Alamat kampus: Jl. Ciwaru Raya, Cipare, Kec. Serang, Kota Serang, Banten 42117.</p>
+                            <!-- Social -->
+                            <ul class="social">
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-vimeo"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-pinterest"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- End Social -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer f-link">
+                            <h2>Quick Links</h2>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right" aria-hidden="true"></i>Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right" aria-hidden="true"></i>Services</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>Newsletter</h2>
+                            <p>Dapatakan artikel menarik seputar bullying dan konsultasi dengan memasukan email di bawah ini.</p>
+                            <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+                                <input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'" required="" type="email">
+                                <button class="button">
+                                    <i class="icofont icofont-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Top -->
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <div class="copyright-content">
+                            <p>© Copyright 2024 | All Rights Reserved by
+                                <a href="<?= base_url('/') ?>">klandestin.my.id</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Copyright -->
+    </footer>
+    <!--/ End Footer Area -->
+
+    <!-- jquery Min JS -->
+    <script src="<?= base_url('/new_landing/js/jquery.min.js') ?>"></script>
+    <!-- jquery Migrate JS -->
+    <script src="<?= base_url('/new_landing/js/jquery-migrate-3.0.0.js') ?>"></script>
+    <!-- jquery Ui JS -->
+    <script src="<?= base_url('/new_landing/js/jquery-ui.min.js') ?>"></script>
+    <!-- Easing JS -->
+    <script src="<?= base_url('/new_landing/js/easing.js') ?>"></script>
+    <!-- Color JS -->
+    <script src="<?= base_url('/new_landing/js/colors.js') ?>"></script>
+    <!-- Popper JS -->
+    <script src="<?= base_url('/new_landing/js/popper.min.js') ?>"></script>
+    <!-- Bootstrap Datepicker JS -->
+    <script src="<?= base_url('/new_landing/js/bootstrap-datepicker.js') ?>"></script>
+    <!-- Jquery Nav JS -->
+    <script src="<?= base_url('/new_landing/js/jquery.nav.js') ?>"></script>
+    <!-- Slicknav JS -->
+    <script src="<?= base_url('/new_landing/js/slicknav.min.js') ?>"></script>
+    <!-- ScrollUp JS -->
+    <script src="<?= base_url('/new_landing/js/jquery.scrollUp.min.js') ?>"></script>
+    <!-- Niceselect JS -->
+    <script src="<?= base_url('/new_landing/js/niceselect.js') ?>"></script>
+    <!-- Tilt Jquery JS -->
+    <script src="<?= base_url('/new_landing/js/tilt.jquery.min.js') ?>"></script>
+    <!-- Owl Carousel JS -->
+    <script src="<?= base_url('/new_landing/js/owl-carousel.js') ?>"></script>
+    <!-- counterup JS -->
+    <script src="<?= base_url('/new_landing/js/jquery.counterup.min.js') ?>"></script>
+    <!-- Steller JS -->
+    <script src="<?= base_url('/new_landing/js/steller.js') ?>"></script>
+    <!-- Wow JS -->
+    <script src="<?= base_url('/new_landing/js/wow.min.js') ?>"></script>
+    <!-- Magnific Popup JS -->
+    <script src="<?= base_url('/new_landing/js/jquery.magnific-popup.min.js') ?>"></script>
+    <!-- Counter Up CDN JS -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="<?= base_url('/new_landing/js/bootstrap.min.js') ?>"></script>
+    <!-- Main JS -->
+    <script src="<?= base_url('/new_landing/js/main.js') ?>"></script>
 </body>
 <script>
-    function setActive(element) {
-        // Remove "active" class from all links
-        var links = document.querySelectorAll('.nav-item.nav-link');
-        links.forEach(function(link) {
-            link.classList.remove('active');
+    // Set "Home" as the default active link
+    document.addEventListener("DOMContentLoaded", function() {
+        setActive(document.querySelector('a[href="#"]').parentNode);
+    });
+
+    // Function to set active class on clicked list item
+    function setActive(clickedElement) {
+        // Remove active class from all list items
+        var listItems = document.querySelectorAll('.nav.menu li');
+        listItems.forEach(function(li) {
+            li.classList.remove('active');
         });
 
-        // Add "active" class to the clicked link
-        element.classList.add('active');
+        // Add active class to the clicked list item
+        clickedElement.classList.add('active');
     }
 </script>
 

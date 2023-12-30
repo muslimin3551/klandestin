@@ -5,7 +5,7 @@
     <div class="col-lg-6 d-none d-lg-block">
         <div id="auth-right">
             <div style="margin: 0 auto;" class="text-center">
-                <h2 style="color: #ffffff;">Bekawan.my.id</h2>
+                <h2 style="color: #ffffff;">Klandestin.my.id</h2>
                 <p style="color: #ffffff;">ADMINISTRATOR</p>
             </div>
         </div>

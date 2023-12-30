@@ -1,211 +1,371 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
+    <!-- Meta Tags -->
     <meta charset="utf-8">
-    <title>Bekawan.my.id - <?= $title ?></title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Site keywords here">
+    <meta name="description" content="">
+    <meta name='copyright' content=''>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Klandestin.my.id -
+        <?= $title ?></title>
 
     <!-- Favicon -->
-    <link href="<?= base_url() ?>/img/favicon.ico" rel="icon">
+    <link rel="icon" href="<?= base_url('/new_landing/img/favicon.png') ?>">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/bootstrap.min.css') ?>">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/nice-select.css') ?>">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/font-awesome.min.css') ?>">
+    <!-- icofont CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/icofont.css') ?>">
+    <!-- Slicknav -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/slicknav.min.css') ?>">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/owl-carousel.css') ?>">
+    <!-- Datepicker CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/datepicker.css') ?>">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/animate.min.css') ?>">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/magnific-popup.css') ?>">
 
-    <!-- Libraries Stylesheet -->
-    <link href="<?= base_url() ?>/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="<?= base_url() ?>/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="<?= base_url() ?>/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Medipro CSS -->
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/normalize.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('/new_landing/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('/new_landing/css/responsive.css') ?>">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="<?= base_url() ?>/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="<?= base_url() ?>/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+
+            <div class="indicator">
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
             </div>
         </div>
-        <!-- Spinner End -->
+    </div>
+    <!-- End Preloader -->
 
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><span class="fs-4">Bekawan.my.id</span></h1>
-                    <!-- <img src="img/logo1.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="<?= base_url('/#') ?>" class="nav-item nav-link" onclick="setActive(this)">Home</a>
-                        <a href="<?= base_url('/#about') ?>" class="nav-item nav-link" onclick="setActive(this)">About</a>
-                        <a href="<?= base_url('/#service') ?>" class="nav-item nav-link" onclick="setActive(this)">Service</a>
-                        <a href="<?= base_url('/#Testimonial') ?>" class="nav-item nav-link" onclick="setActive(this)">Testimonial</a>
-                        <a href="<?= base_url('/#Counselor') ?>" class="nav-item nav-link" onclick="setActive(this)">Counselor</a>
-                        <a href="<?= base_url('/article') ?>" class="nav-item nav-link" onclick="setActive(this)">Article</a>
-                        <a href="<?= base_url('/contact') ?>" class="nav-item nav-link" onclick="setActive(this)">Contact</a>
-                    </div>
-                    <a href="<?= base_url('/login') ?>" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3" style="background-color: #316064;border: 0;">Login</a>
-                </div>
-            </nav>
-
-            <div class="container-xxl py-5 bg-primary hero-header mb-5">
-                <div class="container my-5 py-5 px-lg-5">
-                    <div class="row g-5 py-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid" src="<?= base_url("/img/output-onlinepngtools.png") ?>" alt="" style="background-color: transparent;">
+    <!-- Header Area -->
+    <header class="header">
+        <!-- Header Inner -->
+        <div class="header-inner">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <!-- Start Logo -->
+                            <div class="logo">
+                                <a href="<?= base_url() ?>">
+                                    <h4><span class="text-primary">Klandestin.my.id</span></h4>
+                                </a>
+                            </div>
+                            <!-- End Logo -->
+                            <!-- Mobile Nav -->
+                            <div class="mobile-nav"></div>
+                            <!-- End Mobile Nav -->
+                        </div>
+                        <div class="col-lg-7 col-md-9 col-12">
+                            <!-- Main Menu -->
+                            <div class="main-menu">
+                                <nav class="navigation">
+                                    <ul class="nav menu">
+                                        <li>
+                                            <a href="<?= base_url('/#') ?>" onclick="setActive(this.parentNode)">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= base_url('/#about') ?>" onclick="setActive(this.parentNode)">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= base_url('/#counselor') ?>" onclick="setActive(this.parentNode)">Counselor</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= base_url('/#services') ?>" onclick="setActive(this.parentNode)">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= base_url('/#blog') ?>" onclick="setActive(this.parentNode)">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= base_url('/contact') ?>" onclick="setActive(this.parentNode)">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!--/ End Main Menu -->
+                        </div>
+                        <div class="col-lg-2 col-12">
+                            <div class="get-quote">
+                                <a href="<?= base_url('/login') ?>" class="btn">Get Membership</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
+        <!--/ End Header Inner -->
+    </header>
+    <!-- End Header Area -->
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs overlay">
+        <div class="container">
+            <div class="bread-inner">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Contact Us</h2>
+                        <ul class="bread-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="icofont-simple-right"></i></li>
+                            <li class="active">Contact Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumbs -->
 
-        <!-- Contact Start -->
-        <div class="container-xxl py-5">
-            <div class="container px-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7">
-                        <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
-                            <h6 class="position-relative d-inline text-success ps-4">Contact Us</h6>
-                            <h2 class="mt-2">Contact For Any Query</h2>
+    <!-- Start Contact Us -->
+    <section class="contact-us section">
+        <div class="container">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact-us-left">
+                            <!--Start Google-map -->
+                            <div id="myMap"></div>
+                            <!--/End Google-map -->
                         </div>
-                        <div class="wow fadeInUp" data-wow-delay="0.3s">
-                            <form action="/contact_message" method="post">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
-                                            <label for="name">Your Name</label>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact-us-form">
+                            <h2>Contact With Us</h2>
+                            <p>If you have any questions please fell free to contact with us.</p>
+                            <!-- Form -->
+                            <form class="form" method="post" action="/contact_message">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" placeholder="Name" required="">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
-                                            <label for="email">Your Email</label>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" placeholder="Email" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="phone" placeholder="Phone" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="subject" placeholder="Subject" required="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <textarea name="message" placeholder="Your Message" id="message" name="message" required=""></textarea>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
-                                            <label for="subject">Subject</label>
+                                        <div class="form-group login-btn">
+                                            <button class="btn" type="submit">Send</button>
                                         </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px"></textarea>
-                                            <label for="message">Message</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-success w-100 py-3" type="submit">Send Message</button>
                                     </div>
                                 </div>
+                            </form>
+                            <!--/ End Form -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Contact Us -->
+
+    <!-- Footer Area -->
+    <footer id="footer" class="footer ">
+        <!-- Footer Top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>About Us</h2>
+                            <p>Alamat kampus: Jl. Ciwaru Raya, Cipare, Kec. Serang, Kota Serang, Banten 42117.</p>
+                            <!-- Social -->
+                            <ul class="social">
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-vimeo"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-pinterest"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- End Social -->
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer f-link">
+                            <h2>Quick Links</h2>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right" aria-hidden="true"></i>Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-caret-right" aria-hidden="true"></i>Services</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-footer">
+                            <h2>Newsletter</h2>
+                            <p>Dapatakan artikel menarik seputar bullying dan konsultasi dengan memasukan email di bawah ini.</p>
+                            <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+                                <input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'" required="" type="email">
+                                <button class="button">
+                                    <i class="icofont icofont-paper-plane"></i>
+                                </button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
-
-
-
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Get In Touch</h5>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>Alamat kampus: Jl. Ciwaru Raya, Cipare, Kec. Serang, Kota Serang, Banten 42117</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+622543204321</p>
-                        <p><i class="fa fa-envelope me-3"></i>humas@untirta.ac.id</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Popular Link</h5>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Services</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Newsletter</h5>
-                        <p>Receive the latest information by entering your email below.</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-success fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Bekawan.my.id</a>, All Right Reserved.
+        <!--/ End Footer Top -->
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <div class="copyright-content">
+                            <p>© Copyright 2024 | All Rights Reserved by
+                                <a href="<?= base_url('/') ?>">klandestin.my.id</a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
+        <!--/ End Copyright -->
+    </footer>
+    <!--/ End Footer Area -->
 
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-success btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
-    </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url() ?>/lib/wow/wow.min.js"></script>
-    <script src="<?= base_url() ?>/lib/easing/easing.min.js"></script>
-    <script src="<?= base_url() ?>/lib/waypoints/waypoints.min.js"></script>
-    <script src="<?= base_url() ?>/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="<?= base_url() ?>/lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="<?= base_url() ?>/lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="<?= base_url() ?>/js/main.js"></script>
+    <!-- jquery Min JS -->
+    <script src="<?= base_url('/new_landing/js/jquery.min.js') ?>"></script>
+    <!-- jquery Migrate JS -->
+    <script src="<?= base_url('/new_landing/js/jquery-migrate-3.0.0.js') ?>"></script>
+    <!-- jquery Ui JS -->
+    <script src="<?= base_url('/new_landing/js/jquery-ui.min.js') ?>"></script>
+    <!-- Easing JS -->
+    <script src="<?= base_url('/new_landing/js/easing.js') ?>"></script>
+    <!-- Color JS -->
+    <script src="<?= base_url('/new_landing/js/colors.js') ?>"></script>
+    <!-- Popper JS -->
+    <script src="<?= base_url('/new_landing/js/popper.min.js') ?>"></script>
+    <!-- Bootstrap Datepicker JS -->
+    <script src="<?= base_url('/new_landing/js/bootstrap-datepicker.js') ?>"></script>
+    <!-- Jquery Nav JS -->
+    <script src="<?= base_url('/new_landing/js/jquery.nav.js') ?>"></script>
+    <!-- Slicknav JS -->
+    <script src="<?= base_url('/new_landing/js/slicknav.min.js') ?>"></script>
+    <!-- ScrollUp JS -->
+    <script src="<?= base_url('/new_landing/js/jquery.scrollUp.min.js') ?>"></script>
+    <!-- Niceselect JS -->
+    <script src="<?= base_url('/new_landing/js/niceselect.js') ?>"></script>
+    <!-- Tilt Jquery JS -->
+    <script src="<?= base_url('/new_landing/js/tilt.jquery.min.js') ?>"></script>
+    <!-- Owl Carousel JS -->
+    <script src="<?= base_url('/new_landing/js/owl-carousel.js') ?>"></script>
+    <!-- counterup JS -->
+    <script src="<?= base_url('/new_landing/js/jquery.counterup.min.js') ?>"></script>
+    <!-- Steller JS -->
+    <script src="<?= base_url('/new_landing/js/steller.js') ?>"></script>
+    <!-- Wow JS -->
+    <script src="<?= base_url('/new_landing/js/wow.min.js') ?>"></script>
+    <!-- Magnific Popup JS -->
+    <script src="<?= base_url('/new_landing/js/jquery.magnific-popup.min.js') ?>"></script>
+    <!-- Counter Up CDN JS -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="<?= base_url('/new_landing/js/bootstrap.min.js') ?>"></script>
+    <!-- Main JS -->
+    <script src="<?= base_url('/new_landing/js/main.js') ?>"></script>
+    <!-- Google Map API Key JS -->
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyDGqTyqoPIvYxhn_Sa7ZrK5bENUWhpCo0w"></script>
+    <!-- Gmaps JS -->
+    <script src="<?= base_url('/new_landing/js/gmaps.min.js') ?>"></script>
+    <!-- Map Active JS -->
+    <script src="<?= base_url('/new_landing/js/map-active.js') ?>"></script>
+    <!-- Bootstrap JS -->
 </body>
 <script>
-    function setActive(element) {
-        // Remove "active" class from all links
-        var links = document.querySelectorAll('.nav-item.nav-link');
-        links.forEach(function(link) {
-            link.classList.remove('active');
+    // Set "Home" as the default active link
+    document.addEventListener("DOMContentLoaded", function() {
+        setActive(document.querySelector('a[href="#"]').parentNode);
+    });
+
+    // Function to set active class on clicked list item
+    function setActive(clickedElement) {
+        // Remove active class from all list items
+        var listItems = document.querySelectorAll('.nav.menu li');
+        listItems.forEach(function(li) {
+            li.classList.remove('active');
         });
 
-        // Add "active" class to the clicked link
-        element.classList.add('active');
+        // Add active class to the clicked list item
+        clickedElement.classList.add('active');
     }
 </script>
 

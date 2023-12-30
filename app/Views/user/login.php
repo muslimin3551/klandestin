@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #316064;
+            background-color: #1A76D1;
             color: #fff;
         }
 
@@ -34,8 +34,10 @@
                 <div class="login-container p-4 rounded">
                     <div class="card">
                         <div class="card-body justify-content-center center-content">
-                            <img src="<?= base_url('/img/logo.png') ?>" alt="" height="150px" width="150px">
-                            <h2 class="text-center mb-4">Login</h2>
+                            <br>
+                            <h2><a href="<?= base_url() ?>" class="text-primary" style="text-decoration: none;">Klandestin.my.id</a></h2>
+                            <br>
+                            <h4 class="text-center mb-4">Login</h4>
                             <?php if (session()->getFlashdata('msg')) : ?>
                                 <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
                             <?php endif; ?>
@@ -51,10 +53,10 @@
                                     <label for="password" class="form-label">Password</label>
                                     <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100" style="background-color: #316064;">Login</button>
+                                <button type="submit" class="btn btn-primary w-100" style="background-color: #1A76D1;">Login</button>
                                 <hr>
-                                <p style="font-size: 12px;color: #316064;font-weight: 500;">If you don't have an account <span><a href="<?= base_url('/register') ?>" style="text-decoration: none;">click here</a></span> to register</p>
-                                <p><a href="<?= base_url('/forgot_password') ?>" style="font-size: 12px;color: #316064;font-weight: 500;text-decoration: none;"> Forgot your password ?</a></p>
+                                <p style="font-size: 12px;color: #1A76D1;font-weight: 500;">If you don't have an account <span><a href="<?= base_url('/register') ?>" style="text-decoration: none;">click here</a></span> to register</p>
+                                <p><a href="<?= base_url('/forgot_password') ?>" style="font-size: 12px;color: #1A76D1;font-weight: 500;text-decoration: none;"> Forgot your password ?</a></p>
                             </form>
                         </div>
                     </div>

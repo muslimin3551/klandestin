@@ -12,13 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color: #018249;font-family: 'Poppins', sans-serif;">
+<body style="background-color: #1A76D1;font-family: 'Poppins', sans-serif;">
     <div class="container login">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <div class="card shadow-2-strong" style="border-radius: 1rem;">
                     <div class="card-body p-5 text-center">
-                        <img src="<?= base_url('img/logo.png') ?>" alt="global institute">
+                        <br>
+                        <h2><a href="<?= base_url() ?>" class="text-primary" style="text-decoration: none;">Klandestin.my.id</a></h2>
                         <br>
                         <br>
                         <h4 class="mb-5">Masukan Password Baru Anda!</h4>
@@ -41,7 +42,7 @@
                                 <input type="password" name="confm_password" id="confm_password" class="form-control form-control-lg" placeholder="Konfirmasi password anda" />
                             </div>
 
-                            <button class="btn btn-success btn-lg btn-block" style="background-color: #018249;" type="submit">Atur Ulang</button>
+                            <button class="btn btn-success btn-lg btn-block" style="background-color: #1A76D1;" type="submit">Atur Ulang</button>
                         </form>
                     </div>
                 </div>
