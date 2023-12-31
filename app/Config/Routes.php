@@ -35,6 +35,15 @@ $routes->get('/forgot_password', 'User\Login::forgot_password');
 $routes->post('/forgot', 'User\Login::forgot');
 $routes->get('/reset_password', 'User\Login::reset_password');
 $routes->post('/reset', 'User\Login::reset');
+
+//anonymous post
+$routes->get('anonymous', 'User\Anonymous::index');
+$routes->add('anonymous/(:segment)/edit', 'User\Anonymous::edit/$1');
+$routes->add('anonymous/(:segment)/delete', 'User\Anonymous::delete/$1');
+$routes->post('anonymous/add', 'User\Anonymous::add');
+$routes->post('anonymous/comment', 'User\Anonymous::comment');
+$routes->get('anonymous/like/(:num)', 'User\Anonymous::like/$1');
+
 // ----------------------------------------------------------------end
 
 // ----------------------------------------------------------------ADMIN ----------------------------------------------------------------
@@ -88,6 +97,9 @@ $routes->group('admin', function ($routes) {
     $routes->get('chat', 'Admin\Chat::index');
     $routes->get('discusion/(:num)', 'Admin\Chat::discusion/$1');
     $routes->post('chat/add', 'Admin\Chat::add');
+
+    //chat
+    $routes->get('anonymous', 'Admin\Anonymous::index');
 }); 
 
 // ---------------------------------------------------------------- END AD  DEAD ----------------------------------------------------------------

@@ -36,12 +36,12 @@
                 </div>
 
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-success btn-block mb-4">
+                <button type="submit" class="btn btn-primary btn-block mb-4">
                     Login
                 </button>
             </form>
             <div class="text-left mt-5 text-lg fs-4">
-                <p><a href="<?= base_url('admin/forgot_password') ?>" style="color:#018249;font-size: 14px;"> Forgot password ?</a></p>
+                <p><a href="<?= base_url('admin/forgot_password') ?>" style="color:#1A76D1;font-size: 14px;"> Forgot password ?</a></p>
             </div>
         </div>
     </div>

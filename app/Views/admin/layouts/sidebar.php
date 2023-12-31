@@ -73,6 +73,14 @@ session()
 
 
                 </li>
+                <li class="sidebar-item <?= ($uri1 == 'anonymous') ? 'active' : '' ?> ">
+                    <a href="<?= base_url('admin/anonymous') ?>" class='sidebar-link'>
+                        <i class="bi bi-file-post"></i>
+                        <span>Anonymous Posted</span>
+                    </a>
+
+
+                </li>
 
                 <li class="sidebar-item <?= ($uri1 == 'chat') ? 'active' : '' ?> ">
                     <a href="<?= base_url('admin/chat') ?>" class='sidebar-link'>

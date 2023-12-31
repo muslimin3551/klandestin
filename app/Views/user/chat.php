@@ -47,7 +47,11 @@
                                         <?php if ($interval->days < 0) { ?>
                                             <a href="<?= base_url('membership') ?>" class="btn btn-primary">Choose Membership</a>
                                         <?php } else { ?>
-                                            <a href="<?= base_url('/discusion/' . $membership['id']) ?>" class="btn btn-primary"><i class="bi bi-chat-dots"></i> Start Counseling</a>
+                                            <a href="<?= base_url('/discusion/' . $membership['id']) ?>" class="btn btn-primary"><i class="bi bi-chat-dots"></i> Start Counseling Direct</a>
+                                            <?php
+                                            $link_wa = 'https://api.whatsapp.com/send/?phone=' . str_replace('08', '628', $counselor['phone_number']) . '&text=Saya+Akan+Berkonsultasi+Dengan+Anda+&type=phone_number&app_absent=0';
+                                            ?>
+                                            <a href="<?= $link_wa ?>" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i> Start Counseling Whatapps</a>
                                         <?php } ?>
                                         <hr>
                                         <br>

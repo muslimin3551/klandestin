@@ -34,10 +34,10 @@
                         <i class="bi bi-person"></i>
                     </div>
                 </div>
-                <button class="btn btn-success btn-block btn-lg shadow-lg mt-5">Forgot Password</button>
+                <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Forgot Password</button>
             </form>
             <div class="text-left mt-5 text-lg fs-4">
-                <p><a href="<?= base_url('admin/login') ?>" style="color:#018249;font-size: 14px;">Back to login!</a></p>
+                <p><a href="<?= base_url('admin/login') ?>" style="color:#1A76D1;font-size: 14px;">Back to login!</a></p>
             </div>
         </div>
     </div>

@@ -85,11 +85,11 @@ class Membership extends BaseController
 
             $today = date('Y-m-d H:i:s');
             if ($this->request->getVar('membership_id') == 3) {
-                $end_date = date('Y-m-d H:i:s', strtotime($today . ' + 30 days'));
+                $end_date = date('Y-m-d H:i:s', strtotime($today . ' + 10 days'));
             } elseif ($this->request->getVar('membership_id') == 2) {
-                $end_date = date('Y-m-d H:i:s', strtotime($today . ' + 14 days'));
-            } else {
                 $end_date = date('Y-m-d H:i:s', strtotime($today . ' + 7 days'));
+            } else {
+                $end_date = date('Y-m-d H:i:s', strtotime($today . ' + 3 days'));
             }
 
             if ($this->validate($rules)) {

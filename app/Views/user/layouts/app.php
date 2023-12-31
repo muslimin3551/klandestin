@@ -118,7 +118,10 @@
 
 
     <script src="<?= base_url('/admin/assets/static/js/pages/dashboard.js') ?>"></script>
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
 
 </body>
-
+<script>
+    CKEDITOR.replace('description_post');
+</script>
 </html>
